@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Rejected: Lihir Change Travel Request</title>
+        <style>
+            h3 {
+                font-family: serif;
+            }
+            p, dl, dd, dt {
+                font-family: sans-serif;
+            }
+            dt {
+                text-indent: 5em;
+            }
+        </style>
+    </head>
+    <body>
+
+    	<h2>Rejected</h2>
+    	<h2>The below request has been Rejected.</h2>
+       
+		<p>Requestor: ${context.TravellerDetails.EmployeeFullName}</p>
+		<!--<p>Company Code/Name: ${context.TravellerDetails.CompanyCode}/${context.TravellerDetails.CompanyCodeText}</p>-->
+		<!--<p>Department: ${context.TravellerDetails.PersonnelSubAreaText} - ${context.TravellerDetails.OrganisationUnitText}</p>-->
+		<p>Department: ${context.TravellerDetails.TravellerDepartmentId} - ${context.TravellerDetails.TravellerDepartmentText}</p>
+		<!--<p>Description: ${context.TravelDetails.ReasonforTravel}</p>-->
+		<p>Description: ${context.TravellerDetails.ReasonForChangeText}</p>
+		<!--<p>Proposed Departure Date: ${context.TravelDetails.ProposedDepartureDate}</p>-->
+		<!--<p>Proposed Return Date: ${context.TravelDetails.ProposedReturnDate}</p>-->
+		<p>Site Sponsor: ${context.TravellerDetails.ApproverFullName}</p>
+		
+		<p>has been initiated by: ${context.requestDetails.requestorName} and submitted for approval.</p>
+	</body>
+</html>
