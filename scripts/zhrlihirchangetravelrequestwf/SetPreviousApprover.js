@@ -1,0 +1,1 @@
+$.context.previousApprover = $.context.requestDetails.approver;
