@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            h3 {
+                font-family: serif;
+            }
+            p, dl, dd, dt {
+                font-family: sans-serif;
+            }
+            dt {
+                text-indent: 5em;
+            }
+        </style>
+    </head>
+    <body>
+    	<p>A request for ${context.TravellerDetails.ReasonForChangeText} has been submitted by ${context.requestDetails.requestorName} and is awaiting your approval. </p>
+    	<p>Please review the request <a href=${context.instanceDetails.formApprovalURL}>Lihir Change Travel Request - ${context.requestDetails.requestNum}</a> to action as appropriate.</p>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Please Action Lihir Change Travel Request – ${context.TravellerDetails.TravellerFullName} for ${context.TravellerDetails.ReasonForChangeText} created on ${context.requestDetails.createDate}</title>
+        <style>
+            h3 {
+                font-family: serif;
+            }
+            p, dl, dd, dt {
+                font-family: sans-serif;
+            }
+            dt {
+                text-indent: 5em;
+            }
+        </style>
+    </head>
+    <body>
+    	<h2>Action Pending</h2>
+        <h3>Please log into TrobexisOne to make changes as detailed in the approved Request. Click on <a href=${context.instanceDetails.formURL}>${context.requestDetails.linkTitle} - ${context.requestDetails.requestNum}</a> to review full details of the request</h3>
+        
+		<h3>Once changes made in TrobexisOne click on <a href=${context.instanceDetails.formURL}>${context.requestDetails.linkTitle} - ${context.requestDetails.requestNum}</a>to Complete the action</h3>
+
+		<p>Name: ${context.TravellerDetails.TravellerFullName}</p>
+		<p>Personnel Number: ${context.TravellerDetails.TravellerPersonnelNumber}</p>
+		<p>Department: ${context.TravellerDetails.PersonnelSubAreaText} - ${context.TravellerDetails.OrganisationUnitText}</p>
+		<p>Reason for Change: ${context.TravellerDetails.ReasonForChangeText}</p>
+		<p>Justification: ${context.TravelDetails.AdditionalComments}</p>
+		<p>Approved by: ${context.requestDetails.approver}</p>
+		<p>New Booking Details</p>
+		<p>Date of Travel: ${context.TravelDetails.NewBookingDateOfTravel}</p>
+		<p>Depart From: ${context.TravelDetails.NewBookingDepartFrom}</p>
+		<p>Destination: ${context.TravelDetails.NewBookingDestination}</p>
+		
+		<p>has been initiated by: ${context.requestDetails.requestorName} and submitted for approval.</p>
+	</body>
+</html>
