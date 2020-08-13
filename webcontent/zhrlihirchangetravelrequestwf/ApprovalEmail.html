@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Your Request to Change Travel Request – ${context.TravellerDetails.TravellerFullName} for ${context.TravellerDetails.ReasonForChangeText} created on ${context.requestDetails.createDate}</title>
+        <style>
+            h3 {
+                font-family: serif;
+            }
+            p, dl, dd, dt {
+                font-family: sans-serif;
+            }
+            dt {
+                text-indent: 5em;
+            }
+        </style>
+    </head>
+    <body>
+    	<h2>Approved</h2>
+        <h3>The below request has been Approved</h3>
+
+		<p>Name: ${context.TravellerDetails.TravellerFullName}</p>
+		<p>Personnel Number: ${context.TravellerDetails.TravellerPersonnelNumber}</p>
+		<p>Department: ${context.TravellerDetails.PersonnelSubAreaText} - ${context.TravellerDetails.OrganisationUnitText}</p>
+		<p>Reason for Change: ${context.TravellerDetails.ReasonForChangeText}</p>
+		<p>Justification: ${context.TravelDetails.AdditionalComments}</p>
+		<p>Approved by: ${context.requestDetails.approver}</p>
+		<p><b>New Booking Details</b></p>
+		<p>Date of Travel: ${context.TravelDetails.NewBookingDateOfTravel}</p>
+		<p>Depart From: ${context.TravelDetails.NewBookingDepartFrom}</p>
+		<p>Destination: ${context.TravelDetails.NewBookingDestination}</p>
+		
+		<p>has been initiated by: ${context.requestDetails.requestorName} and submitted for approval.</p>
+	</body>
+</html>
